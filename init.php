@@ -1,5 +1,5 @@
 <?php
 
-use JSONAPI\Extension;
+use Bolt\Extension\Bolt\JSONAPI\Extension;
 
 $app['extensions']->register(new Extension($app));

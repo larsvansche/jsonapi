@@ -148,3 +148,4 @@ queries that you may find useful:
   * Add hooks for handling specific fieldtypes.
   * Add i18n for `detail` field in error messages.
   * Add integration/hooks with other extensions, such as [`RelatedContentByTags`](https://github.com/xiaohutai/bolt-relatedcontentbytags).
+  * Incorrect paths when Bolt is installed in a sub-directory.

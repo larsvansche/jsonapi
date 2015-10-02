@@ -7,7 +7,7 @@
  * @author Xiao-Hu Tai <xiao@twokings.nl>
  */
 
-namespace JSONAPI;
+namespace Bolt\Extension\Bolt\JSONAPI;
 
 use \Bolt\Helpers\Arr;
 use Symfony\Component\HttpFoundation\Request;
