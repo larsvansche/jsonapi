@@ -41,7 +41,7 @@ class Extension extends \Bolt\BaseExtension
         if(isset($this->config['base'])) {
             $this->base = $this->config['base'];
         }
-        $this->basePath = $this->app['paths']['rooturl'] . $this->base;
+        $this->basePath = rtrim($this->app['paths']['rooturl'], '/') . $this->base;
 
         $this->app->get($this->base."/menu", [$this, 'jsonapi_menu'])
                   ->bind('jsonapi_menu');
