@@ -41,7 +41,7 @@ class Extension extends \Bolt\BaseExtension
         if(isset($this->config['base'])) {
             $this->base = $this->config['base'];
         }
-        $this->basePath = $this->app['paths']['canonical'] . $this->base;
+        $this->basePath = $this->app['paths']['rooturl'] . $this->base;
 
         $this->app->get($this->base."/menu", [$this, 'jsonapi_menu'])
                   ->bind('jsonapi_menu');
@@ -1012,7 +1012,7 @@ class Extension extends \Bolt\BaseExtension
     private function makeAbsolutePathToImage($filename = '')
     {
         return sprintf('%s%s%s',
-            $this->app['paths']['canonical'],
+            $this->app['paths']['rooturl'],
             $this->app['paths']['files'],
             $filename
             );
@@ -1021,7 +1021,7 @@ class Extension extends \Bolt\BaseExtension
     private function makeAbsolutePathToThumbnail($filename = '')
     {
         return sprintf('%s/thumbs/%sx%s/%s',
-            $this->app['paths']['canonical'],
+            $this->app['paths']['rooturl'],
             $this->config['thumbnail']['width'],
             $this->config['thumbnail']['height'],
             $filename
